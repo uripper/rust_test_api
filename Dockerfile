@@ -1,4 +1,4 @@
-FROM rust:latest
+FROM rust:latest --memory=4g
 
 WORKDIR /usr/src/app
 
