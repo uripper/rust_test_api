@@ -20,12 +20,14 @@ async fn index() -> impl Responder {
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
+    let port = std::env::var("PORT").unwrap_or_else(|_| "8080".to_string());
+
     HttpServer::new(|| {
         App::new()
             .service(api)
             .service(index)
     })
-    .bind("0.0.0.0:80")?
+    .bind(format!("0.0.0.0:{}", port))?
     .run()
     .await
 }
