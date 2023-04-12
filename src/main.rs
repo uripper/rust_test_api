@@ -25,7 +25,7 @@ async fn main() -> std::io::Result<()> {
             .service(api)
             .service(index)
     })
-    .bind("https://rusttestapi-production.up.railway.app/")?
+    .bind("0.0.0.0:80")?
     .run()
     .await
 }
