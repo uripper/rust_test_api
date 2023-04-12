@@ -25,7 +25,7 @@ async fn main() -> std::io::Result<()> {
             .service(api)
             .service(index)
     })
-    .bind("127.0.0.1:8080")?
+    .bind("https://rusttestapi-production.up.railway.app/")?
     .run()
     .await
 }
