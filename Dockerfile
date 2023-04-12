@@ -1,4 +1,4 @@
-FROM rust:1.70.0-nightly
+FROM rust:1.67
 
 WORKDIR /usr/src/app
 
